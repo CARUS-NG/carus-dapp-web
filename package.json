@@ -1,0 +1,30 @@
+{
+    "name": "carus-dapp",
+    "version": "1.0.0",
+    "description": "Custom Celo Composer project.",
+    "private": true,
+    "author": "Celo",
+    "license": "MIT",
+    "scripts": {
+        "react-app:dev": "yarn workspace @carus-dapp/react-app dev",
+        "react-app:build": "yarn workspace @carus-dapp/react-app build",
+        "react-app:start": "yarn workspace @carus-dapp/react-app start",
+        "react-app:lint": "yarn workspace @carus-dapp/react-app lint",
+        "hardhat:compile": "yarn workspace @carus-dapp/hardhat compile"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/celo-org/celo-composer.git"
+    },
+    "bugs": {
+        "url": "https://github.com/celo-org/celo-composer/issues"
+    },
+    "homepage": "https://github.com/celo-org/celo-composer/blob/main/README.md",
+    "workspaces": [
+        "packages/*"
+    ],
+    "keywords": [
+        "celo-composer",
+        "celo"
+    ]
+}

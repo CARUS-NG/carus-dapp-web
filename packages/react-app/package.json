@@ -15,9 +15,11 @@
         "@tanstack/react-query": "^5.28.6",
         "@wagmi/connectors": "4.1.18",
         "ethers": "^5.7.2",
+        "formik": "^2.4.6",
         "next": "^13.4.2",
         "react": "18.2.0",
         "react-dom": "18.2.0",
+        "react-toastify": "^10.0.5",
         "viem": "2.8.18",
         "wagmi": "2.5.12"
     },

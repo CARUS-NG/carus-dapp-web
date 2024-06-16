@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+body{
+    font-family: 'satoshi', sans-serif;
+}
+
+.is-highlighted {
+    border: 2px solid #026937;
+    box-shadow: 0 0 10px #026937;
+}

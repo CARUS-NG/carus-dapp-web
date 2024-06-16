@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        satoshi: ['Satoshi', 'sans-serif']
+      },
       colors: {
         /** primary */
         "prosperity": "#FCFF52",
@@ -26,7 +29,10 @@ module.exports = {
         "sky": "#7CC0FF",
         "citrus": "#FF9A51",
         "lotus": "#FFA3EB",
-        "lavender": "#B490FF"
+        "lavender": "#B490FF",
+        "carus-green": "#026937",
+        "primary-grey": "#F3F3F3",
+        "secondary-green": "#CCE1D7"
       }
     },
   },

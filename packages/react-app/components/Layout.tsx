@@ -1,3 +1,4 @@
+'use client'
 import { FC, ReactNode } from "react";
 import Header from "./Header";
 // import { usePathname } from 'next/navigation';

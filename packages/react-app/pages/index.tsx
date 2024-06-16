@@ -1,5 +1,7 @@
+'use client'
 import ActionButton from '@/components/ActionButton';
 import HistoryCard from '@/components/HistoryCard';
+import SplashScreen from '@/components/SplashScreen';
 import Dropoff from '@/components/assets/Dropoff';
 import Pickup from '@/components/assets/Pickup';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
@@ -61,23 +63,23 @@ export default function Home() {
     }
 
     return (
-        <div className="max-w-3xl mx-auto flex flex-col">
-            <Link href={'/schedule'} className='bg-gradient-to-r from-[#ABCDBC] to-[#FFEDC14D] pl-3 pb-3 w-full rounded-[10px] grid grid-cols-2'>
-                <div className='flex flex-col justify-end'>
-                    <p className='font-bold text-carus-green'>Request Pickup</p>
-                    <p className='text-[10px] mt-2 text-carus-green'>Request waste pickup at your doorstep</p>
+        isConnected ?
+            <div className="max-w-3xl mx-auto flex flex-col mt-5 mb-10">
+                <Link href={'/schedule'} className='bg-gradient-to-r from-[#ABCDBC] to-[#FFEDC14D] pl-3 pb-3 w-full rounded-[10px] grid grid-cols-2'>
+                    <div className='flex flex-col justify-end'>
+                        <p className='font-bold text-carus-green'>Request Pickup</p>
+                        <p className='text-[10px] mt-2 text-carus-green'>Request waste pickup at your doorstep</p>
+                    </div>
+                    <Image src={'/assets/truck.svg'} alt='truck' width={286} height={216} />
+                </Link>
+
+                <p className='font-bold mt-10'>Quick Action</p>
+                <div className='flex space-x-3 mt-5'>
+                    <ActionButton icon={<Pickup />} label='Schedule Pickup' link='/pickup' />
+                    <ActionButton icon={<Dropoff />} label='Schedule Drop-off' link='/dropoff' inactive />
                 </div>
-                <Image src={'/assets/truck.svg'} alt='truck' width={286} height={216} />
-            </Link>
 
-            <p className='font-bold mt-10'>Quick Action</p>
-            <div className='flex space-x-3 mt-5'>
-                <ActionButton icon={<Pickup />} label='Schedule Pickup' link='/pickup' />
-                <ActionButton icon={<Dropoff />} label='Schedule Drop-off' link='/dropoff' inactive />
-            </div>
-
-            <div className='mt-10'>
-                {isConnected ?
+                <div className='mt-10'>
                     <div>
                         <p className='font-bold'>Total Earnings : <span className='text-carus-green'>0.52 cUSD</span></p>
                         <div className='mt-4 space-y-2'>
@@ -98,17 +100,15 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    : <p className='font-bold'>No wallet connected</p>
-                }
-            </div>
+                </div>
 
-            {/* {isConnected ? (
+                {/* {isConnected ? (
                 <div className="h2 text-center">
                     Your address: {userAddress}
                 </div>
             ) : (
                 <div>No Wallet Connected</div>
             )} */}
-        </div>
+            </div> : <SplashScreen />
     );
 }

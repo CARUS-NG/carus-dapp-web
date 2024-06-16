@@ -9,7 +9,7 @@ const Transactions = () => {
 
     return (
         isConnected ?
-            <div className="max-w-3xl mx-auto flex flex-col">
+            <div className="max-w-3xl mx-auto flex flex-col mt-5 mb-10">
                 <p className='font-bold'>Total Earnings : <span className='text-carus-green'>0.52 cUSD</span></p>
                 <div className='mt-4 space-y-2'>
                     {history.map((item, itemIdx) => (

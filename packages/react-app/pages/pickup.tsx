@@ -25,7 +25,7 @@ const Pickup = () => {
 
 
     return (
-        <div className='max-w-3xl mx-auto font-satoshi'>
+        <div className='max-w-3xl mx-auto font-satoshi mt-5 mb-10'>
             <ToastContainer />
             <h3 className="font-bold mb-3">Category</h3>
             <div className="bg-[#F3F3F3] flex flex-wrap gap-y-3 py-5 rounded-xl">

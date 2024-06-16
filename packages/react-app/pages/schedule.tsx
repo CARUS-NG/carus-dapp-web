@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Schedule = () => {
     return (
-        <div className='space-y-10 max-w-3xl mx-auto'>
+        <div className='space-y-10 max-w-3xl mx-auto mt-5'>
             <Link href={'/pickup'} className='bg-primary-grey p-3 flex justify-between rounded-[10px] h-28'>
                 <div className='flex flex-col justify-end'>
                     <p className='font-bold'>Schedule Pickup</p>

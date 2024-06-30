@@ -9,44 +9,37 @@ import { useConnect } from "wagmi";
 import { injected } from "wagmi/connectors";
 
 export default function Header() {
-    const [hideConnectBtn, setHideConnectBtn] = useState(false);
     const { connect } = useConnect();
 
     useEffect(() => {
         if (window.ethereum && window.ethereum.isMiniPay) {
-            setHideConnectBtn(true);
             connect({ connector: injected({ target: "metaMask" }) });
         }
     }, [connect]);
 
     return (
-        <Disclosure as="nav" className="bg-primary-grey">
-            {({ open }) => (
-                <>
-                    <div className="max-w-3xl mx-auto py-3 px-2">
-                        <div className="space-y-3 items-center justify-center">
-                            <Link href={'/'}>
-                                <Image
-                                    className="block h-8 w-auto"
-                                    src="/logo.svg"
-                                    width="24"
-                                    height="24"
-                                    alt="Carus Logo"
-                                />
-                            </Link>
-                            <div className="">
-                                {/* Nav content */}
-                            </div>
-                            <div className="flex items-center">
-                                {/* {!hideConnectBtn && (
+        <div className="bg-primary-grey">
+            <div className="max-w-3xl mx-auto py-3 px-2">
+                <div className="space-y-3 items-center justify-center">
+                    <Link href={'/'}>
+                        <Image
+                            className="block h-8 w-auto"
+                            src="/logo.svg"
+                            width="24"
+                            height="24"
+                            alt="Carus Logo"
+                        />
+                    </Link>
+                    <div className="">
+                        {/* Nav content */}
+                    </div>
+                    <div className="flex items-center">
+                        {/* {!hideConnectBtn && (
                                     <ConnectButton />
                                 )} */}
-                            </div>
-                        </div>
                     </div>
-
-                </>
-            )}
-        </Disclosure>
+                </div>
+            </div>
+        </div>
     );
 }
